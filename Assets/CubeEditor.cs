@@ -24,6 +24,8 @@ public class CubeEditor : MonoBehaviour
         transform.position = new Vector3(snapPos.x, 0f, snapPos.z);
 
         //update cube label
-        label.text = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        string labelText = snapPos.x / gridSize + "," + snapPos.z / gridSize;
+        gameObject.name = "Cube " + labelText;
+        label.text = labelText;
     }
 }
